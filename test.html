@@ -1,0 +1,15 @@
+---
+layout: page
+title: Projects
+---
+
+<ul>
+{% for project in site.data.projects %}
+  <li>
+    
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.desc }}</p>
+    
+  </li>
+{% endfor %}
+</ul> 

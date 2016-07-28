@@ -19,6 +19,12 @@
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
+
+        {% for my_project in site.projects %}
+          {% if my_project.title %}
+          <a class="page-link" href="{{ my_project.url | prepend: site.baseurl }}">{{ my_project.title }}</a>
+          {% endif %}
+        {% endfor %}
       </div>
     </nav>
 
