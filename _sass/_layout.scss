@@ -44,11 +44,17 @@ body {
     }
 }
 
+.list--tag {
+    list-style: square;
+    padding-left: 1.5em;
+
+}
+
 .tag {
-    background-color: $blue;
-    color: #fff;
-    display: inline-block;
-    font-size: 0.875em;
-    margin: 0 8px 10px 0;
-    padding: 0.25em 0.5em;
+    // background-color: $blue;
+    // color: #fff;
+    // display: block;
+    font-size: 1em;
+    // margin: 0 8px 10px 0;
+    // padding: 0.25em 0.5em;
 }
