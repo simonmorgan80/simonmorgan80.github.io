@@ -18,11 +18,11 @@ body {
     position: relative;
 }
 
-.site-header_title {
+.site-header__title {
 
-}   
+}
 
-.site-header_subtitle {
+.site-header__subtitle {
     border-top: 1px solid $blue;
     font-weight: 400;
     left: 0;
@@ -34,27 +34,14 @@ body {
 
 
 .list {
+    list-style: square;
+    padding-left: 1.5em;
     margin-bottom: 1em;
 }
 
 .list--horizontal {
-    
+
     .list_item {
         display: inline-block;
     }
-}
-
-.list--tag {
-    list-style: square;
-    padding-left: 1.5em;
-
-}
-
-.tag {
-    // background-color: $blue;
-    // color: #fff;
-    // display: block;
-    font-size: 1em;
-    // margin: 0 8px 10px 0;
-    // padding: 0.25em 0.5em;
 }

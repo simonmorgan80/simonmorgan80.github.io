@@ -155,7 +155,7 @@ body {
   padding-top: 40px;
   position: relative; }
 
-.site-header_subtitle {
+.site-header__subtitle {
   border-top: 1px solid #477dca;
   font-weight: 400;
   left: 0;
@@ -165,14 +165,9 @@ body {
   top: 0; }
 
 .list {
+  list-style: square;
+  padding-left: 1.5em;
   margin-bottom: 1em; }
 
 .list--horizontal .list_item {
   display: inline-block; }
-
-.list--tag {
-  list-style: square;
-  padding-left: 1.5em; }
-
-.tag {
-  font-size: 1em; }
