@@ -92,12 +92,13 @@ a {
   text-decoration: none;
   transition: color 0.1s linear;
 
-  &:active, 
-  &:focus, 
+  &:active,
+  &:focus,
   &:hover {
     color: darken($action-color, 15%);
+    text-decoration: underline;
   }
-  
+
   &:active,
   &:focus {
     outline: none;
