@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.header {
+    padding: rem-calc(24 0);
+
+    @include media-breakpoint-up(lg) {
+        padding-top: rem-calc(48);
+    }
+
+    @include media-breakpoint-up(xxl) {
+        padding-top: rem-calc(64);
+    }
+}
+
+.header__inner {
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.header__brand {
+    margin-top: rem-calc(16);
+
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+        
+    }
+}
+
+.header__nav {
+
+    @include media-breakpoint-up(md) {
+        order: 1;
+    }
+}
+
+.header__title {
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.header__link {
+    font-weight: 100;
+    position: relative;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}

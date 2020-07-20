@@ -1,0 +1,25 @@
+@import 'functions';
+
+$palette_blue: #3273dc;
+
+$brand-palette: (
+    'black': #000000,
+    'dark-grey': #3c3c3b,
+    'blue': #3273dc,
+    'light-grey': #fbfbfb
+);
+
+$dark_colors: (
+    'black',
+    'dark_grey',
+    'blue'
+);
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1200px,
+    xxl: 1440px
+);

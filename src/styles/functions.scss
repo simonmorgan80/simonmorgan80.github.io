@@ -1,0 +1,50 @@
+@function palette($key) {
+    @if map-has-key($brand-palette, $key) {
+        @return map-get($brand-palette, $key);
+    }
+    @warn "Unknown `#{$key}` in $brand-palette.";
+    @return null;
+}
+
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: 16px) {
+    $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+    @return $value;
+}
+
+@function rem-calc($values, $base-value: 16px) {
+    $max: length($values);
+
+    @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+    $remValues: ();
+    @for $i from 1 through $max {
+        $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+    }
+    @return $remValues;
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        // Write the media query.
+        @media (min-width: $breakpoint-value) {
+        @content;
+        }
+
+    // If the breakpoint doesn't exist in the map.
+    } @else {
+
+        // Log a warning.
+        @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+}
