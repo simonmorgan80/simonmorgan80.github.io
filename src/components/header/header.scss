@@ -21,18 +21,17 @@
 }
 
 .header__brand {
-    margin-top: rem-calc(16);
+    margin-bottom: rem-calc(24);
 
     @include media-breakpoint-up(md) {
-        margin-top: 0;
-        
+        margin-bottom: 0;
     }
 }
 
 .header__nav {
 
     @include media-breakpoint-up(md) {
-        order: 1;
+        // order: 1;
     }
 }
 

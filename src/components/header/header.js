@@ -9,12 +9,12 @@ const Header = ({ siteTitle }) => (
     <header className="header bg--blue">
         <div className="container">
             <div className="header__inner">                
-                <div className="header__nav">
-                    <Nav />
-                </div>
                 <div className="header__brand">
                     <p className="h2 header__title"><Link to="/" className="header__link">{siteTitle}</Link></p>
                 </div>
+                <div className="header__nav">
+                    <Nav />
+                </div>               
             </div>
         </div>
     </header>
