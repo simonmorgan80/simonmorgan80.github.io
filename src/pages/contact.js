@@ -15,7 +15,7 @@ const Contact = () => (
                 <article className="article">
                     <div className="article__content">                        
                         <p>Please get in touch for more information or if you'd like to discuss upcoming projects you need support with.</p>
-                        <p>I am currently looking for new contracts from the beginning of <strong>August 2020.</strong></p>
+                        <p>I am currently looking for new contracts from the beginning of <strong>February 2022.</strong></p>
                     </div>
                 </article>
                 <aside>

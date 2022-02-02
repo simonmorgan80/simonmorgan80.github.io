@@ -14,7 +14,7 @@ const About = () => (
             <div className="grid">
                 <article className="article">
                     <div className="article__content">                        
-                        <p>I'm a Freelance front-end web developer and technical lead with over 13 years agency experience. I specialize in creating responsive, accessible and high performing front end user interfaces using HTML, CSS and Javascript.</p>
+                        <p>I'm a Freelance front-end web developer and technical lead with over 15 years agency experience. I specialise in creating responsive, accessible and high performing front end user interfaces using HTML, CSS and Javascript.</p>
 
                         <p>For lots of projects my approach is to build out front-end component libraries that are then used to inform and build out the final site or application.  I use tools such as <a href="https://fractal.build/" target="_blank" rel="noreferrer">Fractal.build</a>, <a href="https://webpack.js.org/" target="_blank" rel="noreferrer">Webpack</a> & <a href="https://gulpjs.com/" target="_blank" rel="noreferrer">Gulp</a> to create custom and maintainable component libraries.</p>
 

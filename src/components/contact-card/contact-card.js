@@ -5,7 +5,7 @@ import Icon from "../icon/icon";
 const Contact = ({hideLink}) => {
     return (
         <Card to="/contact/" label="Find out more" hideLink={hideLink}>
-            <h2 className="h4 card__title">Contact</h2>
+            <h2 className="h4 card__title text--blue">Contact</h2>
             <p>Please contact me using the channels below:</p>
             <ul className="unstyled-list">
                 <li className="unstyled-list__item">                                
