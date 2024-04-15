@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import ContactCard from '../components/ContactCard.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+
+        <Hero
+            title="About"
+        />        
+        
+        <section class="section">
+            <div class="container">
+                <div class="grid">
+                
+                    <div class="rich-text">
+
+                        <p>I'm a Freelance front-end web developer and technical lead with over 15 years agency experience. I specialise in creating responsive, accessible and high performing front end user interfaces using HTML, CSS and Javascript.</p><p>For lots of projects my approach is to build out front-end component libraries that are then used to inform and build out the final site or application.  I use tools such as <a href="https://fractal.build/" target="_blank" rel="noreferrer">Fractal.build</a>, <a href="https://webpack.js.org/" target="_blank" rel="noreferrer">Webpack</a> &amp; <a href="https://gulpjs.com/" target="_blank" rel="noreferrer">Gulp</a> to create custom and maintainable component libraries.</p><p>I also develop lots of CMS based sites using <a href="https://wordpress.org/" target="_blank" rel="noopener noreferrer">Wordpress</a> &amp; <a href="https://umbraco.com/" target="_blank" rel="noopener noreferrer">Umbraco</a> to build out component based sites for clients and currently increasing knowledge of Headless CMS such as <a href="https://prismic.io/" target="_blank" rel="noopener noreferrer">Prismic</a> using frameworks like as <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">NextJS</a> and <a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer">Svelte</a> for the front end.</p>
+
+                    </div>
+
+                    <Card 
+                        href=""
+                        title="Contact"
+                        body="",
+                        label="Find out more"
+                    >
+                        <ContactCard />
+                    </Card>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .grid {
+        gap: 1.125rem;
+    }
+
+    @media (min-width: 1024px) {
+        .grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .rich-text {
+            grid-column: 1 / span 2;
+        }
+    }
+</style>

@@ -1,0 +1,23 @@
+---
+interface Props {
+    title: string
+}
+
+const { title } = Astro.props;
+---
+
+<div class="hero bg-blue text-white">
+    <div class="container">
+        <h1>{title}</h1>
+        <slot />
+    </div>
+</div>
+<style>
+    .hero {
+        display: flex;
+        justify-content: flex-end;
+        min-height: 13rem;
+        padding: 4rem 0 2rem;
+        width: 100%;
+    }    
+</style>

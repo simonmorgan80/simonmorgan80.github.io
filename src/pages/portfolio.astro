@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Contact from '../components/ContactCard.astro';
+import Hero from '../components/Hero.astro';
+
+const projects = [
+    { 
+        name: 'Bladonmore', 
+        url: '',
+        content: '<p>Contract working for <a href="https://www.bladonmore.com" target="_blank" rel="noreferrer noopener">Bladonmore.com</a></p><p>Development of custom Wordpress builds using ACF. HTML, CSS, Javascript, Webpack & Gulp</p>',
+        date: 'June 2021 - Jan 2022',
+        subprojects: [
+            'https://www.bladonmore.com',
+            'https://www.arrowfletchings.net/',
+            'https://www.aac-clyde.space/',
+            'https://terracarta.report/'
+        ]
+    },
+    { 
+        name: 'theteam.co.uk', 
+        url: 'http://www.theteam.co.uk',
+        content: '<p>Custom Wordpress build using ACF. HTML, CSS, Javascript, Webpack & Gulp</p>',
+        date: 'September 2021'        
+    },
+    { 
+        name: 'xdefi.io', 
+        url: 'https://www.xdefi.io',
+        content: '<p>Custom Wordpress build using ACF. HTML, CSS, Javascript, Webpack & Gulp</p>',
+        date: 'May 2021'
+    },
+    { 
+        name: 'Pixeledeggs', 
+        url: '',
+        content: '<p>Contract working for <a href="https://www.pixeledeggs.com" target="_blank" rel="noreferrer noopener">Pixeledeggs.com</a></p><p>Part of development team developing custom Wordpress builds using ACF</p>',
+        date: 'June 2020 - Dec 2020',
+        subprojects: [
+            'https://www.missingpeople.org.uk/',
+            'https://immersivearcade.uk',
+            'https://earthshotprize.org'
+        ]
+    },    
+    { 
+        name: 'rafaelvalls.co.uk', 
+        url: 'https://www.rafaelvalls.co.uk/',
+        content: '<p>Custom Wordpress build using ACF. HTML, CSS, Javascript, Webpack & Gulp</p>',
+        date: 'May 2020'
+    },
+    { 
+        name: 'nsandi.com', 
+        url: 'http://nsandi.com',
+        content: '<p> Contract working for <a href="http://www.theteam.co.uk" target="_blank" rel="noreferrer noopener">The Team</a></p><p>Front End Component library development. HTML, CSS, Javascript, Fractal.js, Webpack, Gulp. </p>',
+        date: 'Feb 2020 - May 2020'
+    },
+    { 
+        name: 'burfordcapital.com', 
+        url: 'https://www.burfordcapital.com/',
+        content: '<p>Contract working for <a href="http://www.living-group.com" target="_blank" rel="noreferrer noopener">Living Group</a></p><p>Front End Component library development. HTML, CSS, Javascript, Fractal.js, Webpack, Gulp. </p>',
+        date: '2019'
+    },
+    { 
+        name: 'potterclarkson.com', 
+        url: 'https://www.potterclarkson.com/',
+        content: '<p>Contract working for <a href="http://www.living-group.com" target="_blank" rel="noreferrer noopener">Living Group</a></p><p>Front End Component library development. HTML, CSS, Javascript, Fractal.js, Webpack, Gulp. </p>',
+        date: '2019'
+    },
+    { 
+        name: 'traverssmith.com', 
+        url: 'https://www.traverssmith.com/',
+        content: '<p>Contract working for <a href="http://www.living-group.com" target="_blank" rel="noreferrer noopener">Living Group</a></p><p>Front End Component library development. HTML, CSS, Javascript, Fractal.js, Webpack, Gulp. </p>',
+        date: '2019'
+    },
+    { 
+        name: 'elselondon.com', 
+        url: 'https://www.elselondon.com/',
+        content: '<p>Wordpress Build + Front End Component library development. Wordpress, HTML, CSS, Javascript, Fractal.js, Webpack, Gulp.</p>',
+        date: '2018'
+    },
+    { 
+        name: 'englandgolf.org', 
+        url: 'https://www.englandgolf.org/',
+        content: '<p>Wordpress Build + Front End Component library development. Wordpress, HTML, CSS, Javascript, Fractal.js, Webpack, Gulp.</p>',
+        date: '2018'
+    },
+    { 
+        name: 'nsandi-corporate.com', 
+        url: 'https://nsandi-corporate.com/',
+        content: '<p>Contract working for <a href="http://www.theteam.co.uk" target="_blank" rel="noreferrer noopener">The Team</a></p><p>Front End Component library development. HTML, CSS, Javascript, Fractal.js, Webpack, Gulp. </p>',
+        date: '2018'
+    },
+    { 
+        name: 'harneys.com', 
+        url: 'https://www.harneys.com/',
+        content: '<p>Contract working for <a href="http://www.living-group.com" target="_blank" rel="noreferrer noopener">Living Group</a></p><p>Front End Component library development. HTML, CSS, Javascript, Fractal.js, Webpack, Gulp. </p>',
+        date: '2018'
+    },
+    { 
+        name: 'kasowitz.com', 
+        url: 'https://www.kasowitz.com/',
+        content: '<p> Contract working for <a href="http://www.living-group.com" target="_blank" rel="noreferrer noopener">Living Group</a></p><p>Front End Component library development. HTML, CSS, Javascript, Fractal.js, Webpack, Gulp. </p>',
+        date: '2018'
+    }
+];
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+
+        <Hero
+            title="Portfolio"
+        >
+            <p>Recent work examples:</p>
+        </Hero>
+        
+        <section class="section">
+            <div class="container">
+                <div class="grid">
+                
+                    <div class="projects">
+
+                        <!-- {projects.map(({name, url, content, date, subprojects}) => (
+                            <div>{name}</div>
+                        ))} -->
+
+                        {projects.map(({name, url, content, date, subprojects}) => {
+                            
+                            let title;
+
+                            if (url) {
+                                title = <a href={url} target="_blank" rel="noreferrer noopener" class="project__link">{name}</a>;
+                            } else {
+                                title = name;
+                            }
+
+                            return (
+                                <div class="">
+                                    <div class="project">
+
+                                        <Card
+                                            title={title}
+                                            href=""
+                                            body=""
+                                            label=""
+                                        >
+                                            {date && 
+                                                <small class="">{date}</small>
+                                            }
+                                            
+                                            <Fragment set:html={content} />
+                                            {subprojects &&
+                                                <ul class="">
+                                                    {subprojects.map((url, index) => {
+                                                        return (
+                                                            <li class="">
+                                                            <a href={url} target="_blank" rel="noreferrer noopener" class="">{url}</a>
+                                                            </li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            }
+
+                                            
+                                        </Card>
+                                    </div>
+                                </div>
+                            )
+                        })}
+
+                    </div>
+
+                    <Card 
+                        href=""
+                        title="Contact"
+                        body=""
+                        label="Find out more"
+                    >
+                        <Contact />
+                    </Card>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .grid {
+        gap: 1.125rem;
+    }
+
+    @media (min-width: 1024px) {
+        .grid {
+            align-items: flex-start;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .projects {
+            grid-column: 1 / span 2;
+        }
+    }
+</style>

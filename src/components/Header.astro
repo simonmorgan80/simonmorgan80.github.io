@@ -1,0 +1,72 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+
+interface Props {
+}
+
+const {} = Astro.props;
+---
+
+<div class="header bg-blue text-white">
+    <div class="container">
+        <div>
+            <a href="/" class="h2 text-white">Simon Morgan - Web Development</a>
+        </div>
+        <div>
+            <nav>
+                <a href="/" class={currentPath === "" ? "is-active" : ""}>Home</a>
+                <a href="/about" class={currentPath === "about" ? "is-active" : ""}>About</a>
+                <a href="/portfolio" class={currentPath === "portfolio" ? "is-active" : ""}>Portfolio</a>
+                <a href="/contact" class={currentPath === "contact" ? "is-active" : ""}>Contact</a>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<style>
+    .header {
+        padding: 1.5rem 0;
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: var(--color-white);        
+    }
+
+    a.is-active {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+
+    @media (min-width: 1024px) {
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        .header {
+            padding-top: 2.5rem;
+        }
+    
+        nav {
+            gap: 1.5rem;
+        }
+    }
+
+    .h2 {
+        font-weight: 100;
+        position: relative;
+        text-decoration: none;
+    }
+</style>

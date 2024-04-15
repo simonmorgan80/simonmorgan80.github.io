@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import ContactCard from '../components/ContactCard.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+
+        <Hero
+            title="Contact me"
+        />        
+        
+        <section class="section">
+            <div class="container">
+                <div class="grid">
+                
+                    <div class="rich-text">
+
+                        <Card 
+                            href=""
+                            title="Contact"
+                            body="",
+                            label="Find out more"
+                        >
+                            <ContactCard />
+                        </Card>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .grid {
+        gap: 1.125rem;
+    }
+
+    @media (min-width: 1024px) {
+        .grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .rich-text {
+            grid-column: 1 / span 2;
+        }
+    }
+</style>

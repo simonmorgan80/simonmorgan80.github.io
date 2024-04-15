@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import ContactCard from '../components/ContactCard.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Welcome to Astro.">
+    <main>
+
+        <Hero
+            title="Web Developer"            
+        >
+            <p>Available for contracts starting May 2024</p> 
+        </Hero>
+        
+        <section class="section">
+            <div class="container">
+                <div class="grid">
+                
+                    <Card
+                        href="/about"
+                        title="About me"
+                        body="",
+                        label="Find out more"
+                    >
+                        <p>Freelance front-end web developer and technical lead with over 17 years agency experience. I specialise in creating responsive, accessible and high performing front end user interfaces using HTML, CSS and Javascript.</p>
+                    </Card>
+
+                    <Card
+                        href="/portfolio"
+                        title="Portfolio"
+                        body="",
+                        label="View portfolio"
+                    >
+                        <p>I've worked across various sectors including charities, finance and law. View some of my recent projects.</p>
+                    </Card>
+
+                    <Card 
+                        href=""
+                        title="Contact"
+                        body="",
+                        label="Find out more"
+                    >
+                        <ContactCard />
+                    </Card>
+
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .grid {
+        gap: 1.125rem;
+    }
+
+    @media (min-width: 1024px) {
+        .grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>
