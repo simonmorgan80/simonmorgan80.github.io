@@ -8,25 +8,34 @@ const projects = [
     { 
         name: 'Bladonmore', 
         url: '',
-        content: '<p>Contract working for <a href="https://www.bladonmore.com" target="_blank" rel="noreferrer noopener">Bladonmore.com</a></p><p>Development of custom Wordpress builds using ACF. HTML, CSS, Javascript, Webpack & Gulp</p>',
-        date: 'June 2021 - Jan 2022',
+        content: '<p>Contract working for <a href="https://www.bladonmore.com" target="_blank" rel="noreferrer noopener">Bladonmore.com</a></p><p>Development of custom Wordpress builds using ACF,  HTML, CSS, Javascript, Webpack & Gulp</p>',
+        date: 'Oct 2022 - Present <br>June 2021 - Jan 2022',
         subprojects: [
+            'https://www.royaltypharma.com/',
+            'https://www.apaxglobalalpha.com/',
+            'https://www.palladiumequity.com/',
+            'https://stonepeak.com/',
             'https://www.bladonmore.com',
             'https://www.arrowfletchings.net/',
-            'https://www.aac-clyde.space/',
-            'https://terracarta.report/'
+            'https://www.aac-clyde.space/'
         ]
+    },
+    { 
+        name: 'Havas Lynx Faze', 
+        url: '',
+        content: '<p>Multilingual Gatsby site and WP site support </p>',
+        date: 'Jun 2022 - Sep 2022'        
     },
     { 
         name: 'theteam.co.uk', 
         url: 'http://www.theteam.co.uk',
-        content: '<p>Custom Wordpress build using ACF. HTML, CSS, Javascript, Webpack & Gulp</p>',
+        content: '<p>Custom Wordpress build using ACF,  HTML, CSS, Javascript, Webpack & Gulp</p>',
         date: 'September 2021'        
     },
     { 
         name: 'xdefi.io', 
         url: 'https://www.xdefi.io',
-        content: '<p>Custom Wordpress build using ACF. HTML, CSS, Javascript, Webpack & Gulp</p>',
+        content: '<p>Custom Wordpress build using ACF,  HTML, CSS, Javascript, Webpack & Gulp</p>',
         date: 'May 2021'
     },
     { 
@@ -43,7 +52,7 @@ const projects = [
     { 
         name: 'rafaelvalls.co.uk', 
         url: 'https://www.rafaelvalls.co.uk/',
-        content: '<p>Custom Wordpress build using ACF. HTML, CSS, Javascript, Webpack & Gulp</p>',
+        content: '<p>Custom Wordpress build using ACF,  HTML, CSS, Javascript, Webpack & Gulp</p>',
         date: 'May 2020'
     },
     { 
@@ -143,10 +152,11 @@ const projects = [
                                             label=""
                                         >
                                             {date && 
-                                                <small class="">{date}</small>
+                                                <small class=""><Fragment set:html={date} /></small>
                                             }
                                             
                                             <Fragment set:html={content} />
+
                                             {subprojects &&
                                                 <ul class="">
                                                     {subprojects.map((url, index) => {

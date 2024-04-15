@@ -1,10 +1,8 @@
 ---
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
-
+const pathname = Astro.url.pathname;
+const currentPath = pathname.replace(/\//g, '');
 interface Props {
 }
-
 const {} = Astro.props;
 ---
 
